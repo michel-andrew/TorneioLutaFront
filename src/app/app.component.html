@@ -1,0 +1,40 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">Torneio de Luta</li>
+  </ol>
+</nav>
+<div class="container">
+  <div class="card list-lutador">
+    <h5 class="card-header">Lista de lutadores</h5>
+    <div class="card-body">
+      <button (click)="getLutadores()">Iniciar</button>
+      <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Nome</th>
+              <th scope="col">Idade</th>
+              <th scope="col">Artes Marciais</th>
+              <th scope="col">Total de Lutas</th>
+              <th scope="col">Derrotas</th>
+              <th scope="col">Vitorias</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let lutador of lutadores">
+              <td>{{lutador.id}}</td>
+              <td>{{lutador.nome}}</td>
+              <td>{{lutador.idade}}</td>
+              <td>{{lutador.artesMarciais}}</td>
+              <td>{{lutador.totalLutas}}</td>
+              <td>{{lutador.derrotas}}</td>
+              <td>{{lutador.vitorias}}</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+</div>
+
+
+  
